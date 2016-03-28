@@ -216,6 +216,7 @@ body {
 .flowtime pre,
 .flowtime code {
 	font-family: monospace;
+	background: white;
 	margin: 1rem 0;
 }
 

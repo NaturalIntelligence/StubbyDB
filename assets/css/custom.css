@@ -3,15 +3,6 @@
 	text-shadow: 0px 2px 3px #555;
 }
 
-table{
-    width:100%;
-    table-layout:fixed;
-}
-
-/*.greencode{display: none;}
-.bluecode{display: none;}
-.orangecode{display: none;}*/
-
 .svggreen {
 	stroke:#66CC00;
 }
@@ -57,4 +48,10 @@ path {
   top: 10px;
   left: 50%;
   margin-left: -50px;
+}
+
+img.logo{
+  width: 50%;
+  height: auto;
+  display: inline;
 }

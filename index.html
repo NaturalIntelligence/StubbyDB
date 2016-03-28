@@ -36,7 +36,7 @@
 			<div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="A framework to construct stubbed data services rapidly">
 				<div class="stack-center">
 					<div class="stacked-center">
-						<img src="assets/img/stubbydb_logo.png" style="width: 50%" />
+						<img src="assets/img/stubbydb_logo.png"  class="center logo" />
 						<p style="color: #a0a0a0"><span style="font-size: 7rem;">Stubby DB</span>3.0.0</p>
 						<p><span class="letterpress">Developed by a victim:</span> Amit Gupta</p>
 					</div>
@@ -48,6 +48,7 @@
 			</div>
 			<div id="/section-1/page-3" class="ft-page" data-id="page-3">
 				<h1>Why is it?</h1>
+				With usual approach
 				<div id="appcode">
 					<div  class="left" style="width: 50%">
 						<div id="appactions">
@@ -90,6 +91,7 @@
 				</div>
 			</div>
 			<div id="/section-1/page-4" class="ft-page" data-id="page-4">
+			<h3>With Stubby DB</h3>
 				<div id="stubbydbcode" class="outer">
 			    	<svg height="370" width="320" class="greencode inner">
 						<g fill="none" >
@@ -136,57 +138,259 @@
 				</div>
 			</div>
 			<div id="/section-2/page-2" class="ft-page" data-id="page-2">
-				<h1>Mappings</h1>
-				<ul>
-					<li></li>
-				</ul>
-				<p>Continue...</p>
-			</div>
-			<div id="/section-2/page-2" class="ft-page" data-id="page-2">
-				<ul>
-					<li></li>
-				</ul>
-				<p>Continue...</p>
+				<h1>Zero effort to setup & start</h1>
+				Single command for installation.
+				<pre class="prettyprint">$npm install stubby-db -g</pre>
+				Single command for start up and configuration
+<pre class="prettyprint">
+$stubbydb
+$stubbydb --help
+</pre>
+
 			</div>
 			<div id="/section-2/page-3" class="ft-page" data-id="page-3">
-				<h1>Strategy</h1>
-				
+				<h1>Mappings</h1>
+<pre class="prettyprint">
+-  request:
+      method: POST
+      url: /stubs/(admin|staff|customer|security)/([0-9]+)
+      post: password=([a-zA-Z0-9]+)
+      headers:
+            custom: (\w)
+
+   response:
+      status: 200
+      latency: 3000
+      body: >
+        multiple line response
+        another line
+      #file: authentication.xml
+      headers:
+            custom: <% url.2 %>
+</pre>
+			<div style="float: left">
+				<ul>
+					<li class="ft-fragment">Request part</li>
+					<li class="ft-fragment">Multiple mappings files</li>
+				</ul>
+			</div>
+			<div style="float: left">
+				<ul>
+					<li class="ft-fragment">Short notations</li>
+					<li class="ft-fragment">Default mapping</li>
+				</ul>
+			</div>
+			<div style="float: left">
+				<ul>
+					<li class="ft-fragment">Latency</li>
+				</ul>
+			</div>
+			<p style="clear: left" class="ft-fragment">Continue...</p>
 			</div>
 			<div id="/section-2/page-4" class="ft-page" data-id="page-4">
-				<h1>Overview Mode.</h1>
+			<h1>Strategy</h1>
+<pre class="prettyprint">
+-  request:
+
+   response:
+      strategy: first-found
+      files: ["authentication.xml", "fault.xml"]
+</pre>
+				<ul>
+					<li class="ft-fragment">first-found</li>
+					<li class="ft-fragment">random</li>
+					<li class="ft-fragment">round-robin</li>
+				</ul>
+			</div>
+			<div id="/section-2/page-5" class="ft-page" data-id="page-5">
+				<h1>Dumps</h1>
+				<p>Dumps are static files. You can include dumps anywhere in response.</p>
+				<pre class="prettyprint">[[dumpspath:file1,file2]]</pre>
+				<ul>
+					<li class="ft-fragment">Consistency</li>
+					<li class="ft-fragment">Break the response into multiple parts</li>
+				</ul>
+			</div>
+			<div id="/section-2/page-6" class="ft-page" data-id="page-6">
+				<h1>Markers</h1>
+				<p>To make response dynamic</p>
+
+				<ul>
+					<li class="ft-fragment">{{TODAY}}</li>
+					<li class="ft-fragment">{{TODAY+N}} , {{TODAY-N}}</li>
+					<li class="ft-fragment">{{TODAY-ny+nm-nd}}</li>
+					<li class="ft-fragment">{{URL:someurl}}</li>
+				</ul>
 				
 			</div>
-			
+			<div id="/section-2/page-7" class="ft-page" data-id="page-7">
+				<h1>DB Sets</h1>
+				<p>Skeleton based approach</p>
+<pre  class="prettyprint">
+-  request:
+      url: /stubs/mix
+      post: Hello ([a-zA-Z]+)!!
+      method: POST
+
+   dbset:
+      db: Sample.txt
+      key: '001'
+
+   response:
+      file: mix.txt	
+</pre>
+dbset		
+<pre class="prettyprint">
+    key |value      |markerval
+    001 |1,2        |{{TODAY}}
+    1   |value      |{{TODAY+1y-2m+3d}}	
+</pre>
+
+			</div>
+			<div id="/section-2/page-8" class="ft-page" data-id="page-8">
+				<h1>Debugging</h1>
+				<ul>
+					<li class="ft-fragment">On screen summary</li>
+					<li class="ft-fragment">debug.log, exceptions.log</li>
+					<li class="ft-fragment">?debug=true</li>
+				</ul>
+			</div>
 		</div>
 
 		<div class="ft-section" data-id="section-3">
 			<div id="/section-3/page-1" class="ft-page" data-id="page-1">
-				<h1>Case Study</h1>
-				
+			<div class="stack-center">
+					<div class="stacked-center">
+						<p style="color: #a0a0a0"><span style="font-size: 7rem;">Case Study</span></p>
+					</div>
+				</div>
 			</div>
 			<div id="/section-3/page-2" class="ft-page" data-id="page-2">
-				<h1>Fragments Unleashed</h1>
+<pre class="prettyprint">
+-  request:
+      url: /stubs/(admin|staff|customer|security)/([0-9]+)
+
+   dbset:
+      db: <% url.1 %>
+      key: <% url.2 %>
+
+   response:
+      file: authentication.xml	
+</pre>
+
+<span class="ft-fragment">admin dbset</span>
+
+<pre class="prettyprint ft-fragment">
+emp_num  | token
+001      | safknf-34809n-skfnjk
+002      | asfno0-230480932n-kjnkl
+003      | nk002834-oknkjn-098nkjn	
+</pre>
+
+			<span class="ft-fragment">authentication.xml</span>
+			<pre class="prettyprint ft-fragment">&lt;auth_id&gt;##token##&lt;/auth_id&gt;</pre>
+
+			<p class="ft-fragment">What if url is <strong>localhost:7777/stubs/other/001</strong> ?</p>
+			<p class="ft-fragment">What if url is <strong>localhost:7777/stubs/admin/004</strong> ?</p>
+
+			</div>
+			<div id="/section-3/page-3" class="ft-page" data-id="page-3">
+<pre  class="prettyprint">
+-  request:
+      url: /stubs/(admin|staff|customer|security)/([0-9]+)
+
+   dbset:
+      db: <% url.1 %>
+      key: <% url.2 %>
+      err: skip
+
+   response:
+      file: authentication.xml
+
+-  request:
+      url: /stubs/(admin|staff|customer|security)/([0-9]+)
+
+   dbset:
+      db: prohibited_user_db
+      key: <% url.2 %>
+      err: skip
+
+   response:
+      strategy: random
+      files: ['unauthorized.xml','deleted.xml','locked.xml']
+
+-  request:
+      url: /stubs/(admin|staff|customer|security)/[0-9]+
+
+   response:
+      file: user_not_found.txt 	
+</pre>
+				
+			</div>
+			<div id="/section-3/page-4" class="ft-page" data-id="page-4">
+When key not found
+<pre  class="prettyprint">
+-  request:
+      url: /stubs/(admin|staff|customer|security)/([0-9]+)
+
+   dbset:
+      db: <% url.1 %>
+      key: <% url.2 %>
+      err:
+         file: fault.xml
+
+   response:
+      file: authentication.xml
+</pre>
+				
+			</div>
+			<div id="/section-3/page-4" class="ft-page" data-id="page-4">
+			<h1>Strategy</h1>
+<pre  class="prettyprint">
+-  request:
+      url: /stubs/(admin|staff|customer|security)/[0-9]+
+
+   dbset:
+      db: authtokens
+      strategy: random
+
+   response:
+      file: authentication.xml
+</pre>
 				
 			</div>
 		</div>
 
 
 		<div class="ft-section" data-id="section-9">
-			<div id="/section-9/page-1" class="ft-page" data-id="page-1">
+			<div id="/section-4/page-1" class="ft-page" data-id="page-1">
 				<h1>Use It! It’s Free</h1>
 				<p>This project is open source, feel free to contribute to the development on <a href="https://github.com/NaturalIntelligence/StubbyDB" target="_blank">Github</a>.</p>
 				<p>Feedbacks, suggestions and bug reports are welcomes.</p>
-				<p>If you like this work spread the word.</p>
+				<p>If you like this work <strong>spread the word</strong>.</p>
+			</div>
+			<div id="/section-4/page-2" class="ft-page" data-id="page-2">
+				<h1>Important Links</h1>
+				<ul>
+					<li><a href="https://github.com/NaturalIntelligence/StubbyDB">GitHub</a></li>
+					<li><a href="https://github.com/NaturalIntelligence/StubbyDB/wiki">Wiki</a></li>
+					<li><a href="https://github.com/NaturalIntelligence/StubbyDB/issues">Issues</a></li>
+				</ul>
 			</div>
 
-			<div id="/section-9/page-2" class="ft-page" data-id="page-2">
-				<h1>Thank You</h1>
+			<div id="/section-4/page-3" class="ft-page" data-id="page-3">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p style="color: #a0a0a0"><span style="font-size: 7rem;">Thank You</span></p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<script src="assets/js/flowtime.min.js"></script>
 	<script   src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	<script type="text/javascript">
 
 		// Configuration API test

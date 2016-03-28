@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" class="ie ie6 lt-ie9">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" class="ie ie7 lt-ie9">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" class="ie ie8 lt-ie9">
+<![endif]-->
+<!--[if gte IE 9]>
+<html lang="en-US" class="ie ie9">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en-US" class="">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0 minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="marcolago">
+
+	<meta name="description" content="Stubby DB is a complete solution to maintain stubs for rapid development.">
+
+	<title>Stubby DB</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="css/flowtime.css">
+	<link rel="stylesheet" href="css/themes/default.css">
+	<link rel="stylesheet" href="assets/css/prism.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="">
+
+	<div class="flowtime">
+		<div class="ft-section" data-id="section-1">
+			<div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="A Presentation Framework by @marcolago">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<img src="assets/img/stubbydb_logo.png" style="width: 50%" />
+						<p style="color: #a0a0a0"><span style="font-size: 7rem;">Stubby DB</span>3.0.0</p>
+						<p><span class="letterpress">Developed by a victim:</span> Amit Gupta</p>
+					</div>
+				</div>
+			</div>
+			<div id="/section-1/page-2" class="ft-page" data-id="page-2">
+				<h1>What is it?</h1>
+				<p>A framework to construct stubbed data services rapidly.</p>
+			</div>
+			<div id="/section-1/page-3" class="ft-page" data-id="page-3">
+				<h1>Why is it?</h1>
+				<div id="appcode">
+					<div  class="left" style="width: 50%">
+						<div id="appactions">
+				  		<span class="greencode ft-fragment"><p>Set up</p>Initial code set up, logging, handling requests, server set up</span>
+				  		<span class="bluecode ft-fragment"><p>Handling Response</p>generate dates, encode urls etc.
+			Derive data from input</span>
+				  		<span class="orangecode ft-fragment"><p>pieces of actual response</p></span>
+				  		</div>
+				  		<ul id="appproblems">
+					  		<li class="ft-fragment">Code and stubs are tightly coupled.</li>
+					  		<li class="ft-fragment">Code for stub data</li>
+					  		<li class="ft-fragment">Not readable and difficult to understand</li>
+					  	</ul>
+				  	</div>
+					<div id="codelines">
+				    	<svg height="370" width="320">
+							<g fill="none" >
+							    <path class="svggreen greencode" d="M5 10 l300 0" />
+							    <path class="svggreen greencode" d="M5 70 l130 0" />
+							    <path class="svggreen greencode" d="M5 130 l250 0" />
+							    <path class="svggreen greencode" d="M5 190 l100 0" />
+							    <path class="svggreen greencode" d="M5 250 l140 0" />
+							    <path class="svggreen greencode" d="M5 310 l300 0" />
+							    <path class="svgblue bluecode" d="M5 50 l250 0" />
+							    <path class="svgblue bluecode" d="M5 110 l100 0" />
+							    <path class="svgblue bluecode" d="M5 170 l170 0" />
+							    <path class="svgblue bluecode" d="M5 230 l240 0" />
+							    <path class="svgblue bluecode" d="M5 290 l100 0" />
+							    <path class="svgblue bluecode" d="M5 350 l180 0" />
+							    <path class="svgorange orangecode" d="M5 30 l215 0" />
+							    <path class="svgorange orangecode" d="M5 90 l80 0" />
+							    <path class="svgorange orangecode" d="M5 150 l300 0" />
+							    <path class="svgorange orangecode" d="M5 210 l200 0" />
+							    <path class="svgorange orangecode" d="M5 270 l200 0" />
+							    <path class="svgorange orangecode" d="M5 330 l230 0" />	
+							</g>
+							Sorry, your browser does not support inline SVG.
+						</svg>
+				  	</div>
+				</div>
+			</div>
+			<div id="/section-1/page-4" class="ft-page" data-id="page-4">
+				<div id="stubbydbcode" class="outer">
+			    	<svg height="370" width="320" class="greencode inner">
+						<g fill="none" >
+						    <path class="svggreen" d="M5 10 l300 0" />
+						    <path class="svggreen" d="M5 70 l130 0" />
+						    <path class="svggreen" d="M5 130 l250 0" />
+						    <path class="svggreen" d="M5 190 l100 0" />
+						    <path class="svggreen" d="M5 250 l140 0" />
+						    <path class="svggreen" d="M5 310 l300 0" />
+						</g>
+						Sorry, your browser does not support inline SVG.
+					</svg>
+					<svg height="370" width="320" class="bluecode inner">
+						<g fill="none">
+						    <path class="svgblue" d="M5 50 l250 0" />
+						    <path class="svgblue" d="M5 110 l100 0" />
+						    <path class="svgblue" d="M5 170 l170 0" />
+						    <path class="svgblue" d="M5 230 l240 0" />
+						    <path class="svgblue" d="M5 290 l100 0" />
+						    <path class="svgblue" d="M5 350 l180 0" />
+						</g>
+						Sorry, your browser does not support inline SVG.
+					</svg>
+					<svg height="370" width="320"  class="orangecode inner">
+						<g fill="none">
+						    <path class="svgorange" d="M5 30 l215 0" />
+						    <path class="svgorange" d="M5 90 l80 0" />
+						    <path class="svgorange" d="M5 150 l300 0" />
+						    <path class="svgorange" d="M5 210 l200 0" />
+						    <path class="svgorange" d="M5 270 l200 0" />
+						    <path class="svgorange" d="M5 330 l230 0" />
+						</g>
+						Sorry, your browser does not support inline SVG.
+					</svg>
+			  	</div>
+			</div>
+		</div>
+		<div class="ft-section" data-id="section-2">
+			<div id="/section-2/page-1" class="ft-page" data-id="page-1">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p style="color: #a0a0a0"><span style="font-size: 7rem;">Features</span></p>
+						<p><span class="letterpress">Developed by a victim:</span> Amit Gupta</p>
+					</div>
+				</div>
+			</div>
+			<div id="/section-2/page-2" class="ft-page" data-id="page-2">
+				<h1>Mappings</h1>
+				<ul>
+					<li></li>
+				</ul>
+				<p>Continue...</p>
+			</div>
+			<div id="/section-2/page-2" class="ft-page" data-id="page-2">
+				<ul>
+					<li></li>
+				</ul>
+				<p>Continue...</p>
+			</div>
+			<div id="/section-2/page-3" class="ft-page" data-id="page-3">
+				<h1>Strategy</h1>
+				
+			</div>
+			<div id="/section-2/page-4" class="ft-page" data-id="page-4">
+				<h1>Overview Mode.</h1>
+				
+			</div>
+			<div id="/section-2/page-5" class="ft-page" data-id="page-5">
+				<h1>Navigating the Overview</h1>
+				
+			</div>
+			<div id="/section-2/page-6" class="ft-page" data-id="page-6">
+				<h1>Navigate via Links or Javascript API</h1>
+				
+			</div>
+			
+		</div>
+
+		<div class="ft-section" data-id="section-3">
+			<div id="/section-3/page-1" class="ft-page" data-id="page-1">
+				<h1>Case Study</h1>
+				
+			</div>
+			<div id="/section-3/page-2" class="ft-page" data-id="page-2">
+				<h1>Fragments Unleashed</h1>
+				
+			</div>
+		</div>
+
+		<div class="ft-section" data-id="section-4">
+			<div id="/section-4/page-1" class="ft-page" data-id="page-1">
+				<h1>Default HTML Structures</h1>
+				
+			</div>
+			<div id="/section-4/page-2" class="ft-page" data-id="page-2">
+				<h1>Unordered Lists</h1>
+				
+			</div>
+			<div id="/section-4/page-3" class="ft-page" data-id="page-3">
+				<h1>Ordered Lists</h1>
+				
+			</div>
+			<div id="/section-4/page-4" class="ft-page" data-id="page-4">
+				<h1>Definition Lists</h1>
+				
+			</div>
+			<div id="/section-4/page-5" class="ft-page" data-id="page-5">
+				<h1>Quotes and Citations</h1>
+				
+			</div>
+			<div id="/section-4/page-6" class="ft-page" data-id="page-6">
+				<h1>Theme and Styling</h1>
+				
+			</div>
+		</div>
+
+		<div class="ft-section" data-id="section-5">
+			<div id="/section-5/page-1" class="ft-page" data-id="page-1">
+				<h1>Image Management</h1>
+				
+			</div>
+			<div id="/section-5/page-2" class="ft-page" data-id="page-2" data-title="Fluid Images">
+			</div>
+			<div id="/section-5/page-3" class="ft-page" data-id="page-3">
+				<h1>Stacked Images</h1>
+			</div>
+			<div id="/section-5/page-4" class="ft-page" data-id="page-4">
+				<div class="stack-center">
+					<h1 class="stacked-center">Centered Stacked Images</h1>
+				</div>
+			</div>
+			<div id="/section-5/page-5" class="ft-page" data-id="page-5">
+				
+			</div>
+		</div>
+
+		<div class="ft-section" data-id="section-6">
+			<div id="/section-6/page-1" class="ft-page" data-id="page-1">
+				<h1>Native Parallax Support</h1>
+				
+			</div>
+			<div id="/section-6/page-2" class="ft-page parallax-demo" data-id="page-2">
+				<h1>The Invaders from Audiogalaxy</h1>
+			</div>
+			<div id="/section-6/page-3" class="ft-page" data-id="page-3">
+				<h1>This Page Is Just for Testing the Parallax</h1>
+			</div>
+		</div>
+
+		<div class="ft-section" data-id="section-7">
+			<div id="/section-7/page-1" class="ft-page" data-id="page-1">
+				<h1>Code Snippets Highlight</h1>
+				<p>Code highlight is a courtesy of <a href="http://prismjs.com/" target="_blank">Lea Verou’s Prism</a>.<br>Because I really didn’t want to re-invent the wheel.<br><span class="small">You can use what you want, it’s not a dependency (but it’s very smart and cool).</span></p>
+				<pre><code class="language-javascript">function saySomethingSmart()
+{
+	alert("The bad craftsman blames his tools!");
+}</code></pre>
+				<pre><code class="language-css">.is-not-water {
+	display: inline-block;
+}</code></pre>
+				<pre><code class="language-markup">&lt;h1&gt;The Bad Craftsman Blames His Tools!&lt;/h1&gt;</code></pre>
+			</div>
+
+			<div id="/section-7/page-2" class="ft-page" data-id="page-2">
+				<h1>Events and Custom Implementations</h1>
+				
+			</div>
+		</div>
+
+		<div class="ft-section" data-id="section-8">
+			<div id="/section-8/page-1" class="ft-page" data-id="page-1">
+				<h1>Some Examples</h1>
+				
+				<p>Continues …</p>
+			</div>
+
+			<div id="/section-8/page-2" class="ft-page" data-id="page-2">
+				<h1>More Examples</h1>
+
+			</div>
+		</div>
+
+		<div class="ft-section" data-id="section-9">
+			<div id="/section-9/page-1" class="ft-page" data-id="page-1">
+				<h1>Use It! It’s Free</h1>
+				<p>This project is open source, feel free to contribute to the development on <a href="https://github.com/marcolago/flowtime.js" target="_blank">Github</a>.</p>
+				<p>Feedbacks, suggestions and bug reports are welcomes.</p>
+				<p>Use it as you wish and build great things.<br>And when you’ll have done let me know the URL, I will appreciate it.</p>
+			</div>
+
+			<div id="/section-9/page-2" class="ft-page" data-id="page-2">
+				<h1>Thank You</h1>
+				<p>Designed and coded by Marco Lago<br>
+					Interaction/Experience/Game/Designer/Developer</p>
+				<p>You can find me on Twitter as <a href="https://twitter.com/marcolago" target="_blank">@marcolago</a></p>
+				<p>If you like this work spread the word, you know how ;)</p>
+				<h2>Have Fun</h2>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/brav1toolbox.js"></script>
+	<script src="assets/js/flowtime.js"></script>
+	<script src="assets/js/prism.js"></script>
+	<script   src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+	<script type="text/javascript">
+
+		// Configuration API test
+		Flowtime.showProgress(true);
+		// Flowtime.fragmentsOnSide(true);
+		// Flowtime.fragmentsOnBack(true);
+		// Flowtime.useHistory(false);
+		// Flowtime.slideInPx(true);
+		// Flowtime.sectionsSlideToTop(true);
+		// Flowtime.backFromPageToTop(true);
+		// Flowtime.gridNavigation(false);
+		// Flowtime.useOverviewVariant(true);
+		Flowtime.parallaxInPx(true);
+		//
+		// event management
+		// Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
+		// starts the application with configuration options
+		Flowtime.start();
+
+		Brav1Toolbox.addListener(window, "keydown", customAnimation);
+		function customAnimation(e){
+			if(e.keyCode == 40){
+				var actionHolder = ".actual.hilite #appcode";
+			  	if($(actionHolder).length > 0){
+			  		$(actionHolder).dequeue();
+			  		$(actionHolder).queue(function(){
+			  			$(this).find(".greencode").show('slow');
+			  		}).queue(function(){
+			  			$(this).find(".bluecode").show('slow');
+			  		}).queue(function(){
+			  			$(this).find(".orangecode").show('slow');
+			  		}).queue(function(){
+			  			$(this).find("#appactions").hide("slow");
+			  		}).queue(function(){
+			  			$(this).find("#appproblems").show('slow');
+			  		});
+			  		e.preventDefault();
+			  	}
+			  }
+			  if(e.keyCode == 13){
+			  	var actionHolder = ".actual.hilite #stubbydbcode";
+			  	if($(actionHolder).length > 0){
+			  		$(actionHolder).dequeue();
+			  		$(actionHolder).queue(function(){
+			  			$(this).find(".greencode").hide('slow');
+			  		}).queue(function(){
+			  			$(this).find(".bluecode").animate({ "left": "+=100px" }, "slow" );
+			  			$(this).find(".orangecode").animate({ "left": "-=100px" }, "slow" );
+			  		});
+			  	}
+			}
+		}
+
+		$(document).ready(function(){
+			$("#appcode .greencode").hide();
+			$("#appcode .bluecode").hide();
+			$("#appcode .orangecode").hide();
+		});
+/*var x=0;
+$('.actual.hilite #appcode .greencode').each(function () {
+   x += 100;
+   $(this).attr('transform', 'translate('+x+', 0)');
+});*/
+	</script>
+</body>
+</html>

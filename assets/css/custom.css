@@ -55,3 +55,22 @@ img.logo{
   height: auto;
   display: inline;
 }
+
+.stunned{
+  background: url("../img/Nushi_stunned.jpg") no-repeat;
+  background-color:rgba(255,255,255,0.9);
+  background-size:cover;
+}
+
+.bet_time {
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+.image-blurred-edge {
+    background: url('../img/nushi_camera.jpg') left top no-repeat;
+    box-shadow: 0 0 8px 8px #424242 inset;
+    width: 40%;
+    height: 100%;
+}

@@ -130,14 +130,14 @@
 			</div>
 		</div>
 		<div class="ft-section" data-id="section-2">
-			<div id="/section-2/page-1" class="ft-page" data-id="page-1">
+			<div id="/section-2/page-1" class="ft-page" data-id="page-1" data-title="Features">
 				<div class="stack-center">
 					<div class="stacked-center">
 						<p style="color: #a0a0a0"><span style="font-size: 7rem;">Features</span></p>
 					</div>
 				</div>
 			</div>
-			<div id="/section-2/page-2" class="ft-page" data-id="page-2">
+			<div id="/section-2/page-2" class="ft-page" data-id="page-2" data-title="Features">
 				<h1>Zero effort to setup & start</h1>
 				Single command for installation.
 				<pre class="prettyprint">$npm install stubby-db -g</pre>
@@ -148,7 +148,7 @@ $stubbydb --help
 </pre>
 
 			</div>
-			<div id="/section-2/page-3" class="ft-page" data-id="page-3">
+			<div id="/section-2/page-3" class="ft-page" data-id="page-3" data-title="Features: Mappings">
 				<h1>Mappings</h1>
 <pre class="prettyprint">
 -  request:
@@ -187,7 +187,7 @@ $stubbydb --help
 			</div>
 			<p style="clear: left" class="ft-fragment">Continue...</p>
 			</div>
-			<div id="/section-2/page-4" class="ft-page" data-id="page-4">
+			<div id="/section-2/page-4" class="ft-page" data-id="page-4" data-title="Features: Response strategy">
 			<h1>Strategy</h1>
 <pre class="prettyprint">
 -  request:
@@ -202,7 +202,7 @@ $stubbydb --help
 					<li class="ft-fragment">round-robin</li>
 				</ul>
 			</div>
-			<div id="/section-2/page-5" class="ft-page" data-id="page-5">
+			<div id="/section-2/page-5" class="ft-page" data-id="page-5" data-title="Features: Dumps">
 				<h1>Dumps</h1>
 				<p>Dumps are static files. You can include dumps anywhere in response.</p>
 				<pre class="prettyprint">[[dumpspath:file1,file2]]</pre>
@@ -211,7 +211,7 @@ $stubbydb --help
 					<li class="ft-fragment">Break the response into multiple parts</li>
 				</ul>
 			</div>
-			<div id="/section-2/page-6" class="ft-page" data-id="page-6">
+			<div id="/section-2/page-6" class="ft-page" data-id="page-6" data-title="Features: Markers">
 				<h1>Markers</h1>
 				<p>To make response dynamic</p>
 
@@ -223,7 +223,7 @@ $stubbydb --help
 				</ul>
 				
 			</div>
-			<div id="/section-2/page-7" class="ft-page" data-id="page-7">
+			<div id="/section-2/page-7" class="ft-page" data-id="page-7" data-title="Features: DBsets">
 				<h1>DB Sets</h1>
 				<p>Skeleton based approach</p>
 <pre  class="prettyprint">
@@ -247,7 +247,7 @@ dbset
 </pre>
 
 			</div>
-			<div id="/section-2/page-8" class="ft-page" data-id="page-8">
+			<div id="/section-2/page-8" class="ft-page" data-id="page-8" data-title="Features: Debug & Logs">
 				<h1>Debugging</h1>
 				<ul>
 					<li class="ft-fragment">On screen summary</li>
@@ -255,17 +255,23 @@ dbset
 					<li class="ft-fragment">?debug=true</li>
 				</ul>
 			</div>
+
+			<div id="/section-2/page-9" class="ft-page stunned" data-id="page-9" data-title="Features: Debug & Logs">
+				<h3><strong>Going everything over the head ....?</strong>></h3>
+
+				<div class="bet_time"><p>Let's do some practical...</p></div>
+			</div>
 		</div>
 
 		<div class="ft-section" data-id="section-3">
-			<div id="/section-3/page-1" class="ft-page" data-id="page-1">
+			<div id="/section-3/page-1" class="ft-page" data-id="page-1" data-title="Case Study">
 			<div class="stack-center">
 					<div class="stacked-center">
 						<p style="color: #a0a0a0"><span style="font-size: 7rem;">Case Study</span></p>
 					</div>
 				</div>
 			</div>
-			<div id="/section-3/page-2" class="ft-page" data-id="page-2">
+			<div id="/section-3/page-2" class="ft-page" data-id="page-2" data-title="Case Study">
 <pre class="prettyprint">
 -  request:
       url: /stubs/(admin|staff|customer|security)/([0-9]+)
@@ -294,7 +300,7 @@ emp_num  | token
 			<p class="ft-fragment">What if url is <strong>localhost:7777/stubs/admin/004</strong> ?</p>
 
 			</div>
-			<div id="/section-3/page-3" class="ft-page" data-id="page-3">
+			<div id="/section-3/page-3" class="ft-page" data-id="page-3" data-title="Case Study">
 <pre  class="prettyprint">
 -  request:
       url: /stubs/(admin|staff|customer|security)/([0-9]+)
@@ -327,7 +333,7 @@ emp_num  | token
 </pre>
 				
 			</div>
-			<div id="/section-3/page-4" class="ft-page" data-id="page-4">
+			<div id="/section-3/page-4" class="ft-page" data-id="page-4" data-title="Case Study">
 When key not found
 <pre  class="prettyprint">
 -  request:
@@ -344,7 +350,7 @@ When key not found
 </pre>
 				
 			</div>
-			<div id="/section-3/page-4" class="ft-page" data-id="page-4">
+			<div id="/section-3/page-4" class="ft-page" data-id="page-4" data-title="Case Study">
 			<h1>Strategy</h1>
 <pre  class="prettyprint">
 -  request:
@@ -365,9 +371,14 @@ When key not found
 		<div class="ft-section" data-id="section-9">
 			<div id="/section-4/page-1" class="ft-page" data-id="page-1">
 				<h1>Use It! It’s Free</h1>
-				<p>This project is open source, feel free to contribute to the development on <a href="https://github.com/NaturalIntelligence/StubbyDB" target="_blank">Github</a>.</p>
-				<p>Feedbacks, suggestions and bug reports are welcomes.</p>
-				<p>If you like this work <strong>spread the word</strong>.</p>
+				<div class="left" style="width:48%">
+					<p> </p>
+					<p>This project is open source, feel free to contribute to the development on <a href="https://github.com/NaturalIntelligence/StubbyDB" target="_blank">Github</a>.</p>
+					<p>Feedbacks, suggestions and bug reports are welcomes.</p>
+					<p>If you like this work <strong>spread the word</strong>.</p>
+				</div>
+				<div class="left image-blurred-edge"></div>
+				
 			</div>
 			<div id="/section-4/page-2" class="ft-page" data-id="page-2">
 				<h1>Important Links</h1>
@@ -378,7 +389,7 @@ When key not found
 				</ul>
 			</div>
 
-			<div id="/section-4/page-3" class="ft-page" data-id="page-3">
+			<div id="/section-4/page-3" class="ft-page" data-id="page-3" data-title="Thank You">
 				<div class="stack-center">
 					<div class="stacked-center">
 						<p style="color: #a0a0a0"><span style="font-size: 7rem;">Thank You</span></p>
@@ -389,7 +400,7 @@ When key not found
 	</div>
 
 	<script src="assets/js/flowtime.min.js"></script>
-	<script   src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	<script type="text/javascript">
 

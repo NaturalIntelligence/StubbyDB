@@ -62,14 +62,35 @@ img.logo{
   background-size:cover;
 }
 
+.allthebest{
+  background: url("../img/allthebest.jpg") no-repeat;
+  background-color:rgba(255,255,255,0.9);
+  background-size:cover;
+}
+
 .bet_time {
     position:absolute;
     bottom:0;
     right:0;
 }
 
+.image-blurred-edge-study {
+    background: url('../img/study.jpg') left top no-repeat;
+    box-shadow: 0 0 8px 8px #424242 inset;
+    width: 40%;
+    height: 100%;
+    background-size:cover;
+}
+
 .image-blurred-edge {
     background: url('../img/nushi_camera.jpg') left top no-repeat;
+    box-shadow: 0 0 8px 8px #424242 inset;
+    width: 40%;
+    height: 100%;
+}
+
+.image-blurred-edge-goaway {
+    background: url('../img/goaway.jpg') left top no-repeat;
     box-shadow: 0 0 8px 8px #424242 inset;
     width: 40%;
     height: 100%;

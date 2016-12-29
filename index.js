@@ -75,7 +75,7 @@ for(var i=2; i<process.argv.length;i++){
 
 
 console.log("############## Warning ##########");
-console.log("There is change in markers. Visit home page for more information.");
+console.log("This project has been renamed to Stubmatic. So any change after 4.2.0 will be happening on Stubmatic only.");
 console.log("#################################");
 var configBuilder = require("./os/nushi/stubbydb/configbuilder");
 configBuilder.buildConfig(options,process.argv.length);

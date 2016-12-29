@@ -2,7 +2,7 @@ Usage: stubby-db [OPTION]...
 Runs stubbyDB server
 
 ############## Warning ##########
-Deprecated markers have been removed. Use relevant functions instead.
+This project has been renamed to Stubmatic. So any change after 4.2.0 will be happening on Stubmatic only.
 #################################
 
 Arguments

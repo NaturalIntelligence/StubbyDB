@@ -23,12 +23,12 @@ Important links : [Video Tutorial](https://youtu.be/7mA4-MXxwgk), [Wiki](https:/
 
 [![Donate to author](https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_92x26.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KQJAX48SPUKNC)
 
-##History
+## History
 Developed by a victim.
 
 I was  previously using an open source project to manage stubbed data. However with the time when the project is expanded, I started missing few features in that. I also faced many limitations. Hence I decided to created a simple, light weighted, highly customizable, and easy to handy tool to manage stub data in whichever way I want.
 
-##Description
+## Description
 Stubby DB is a npm module. In simple words you can stub the HTTP/HTTPS calls to provide stubbed data. You can make stubbed data service for SOAP or REST calls. Basic functionality is somewhat similar to stubby4j. But it has so many other features. 
 
 <p align="center"><a href="https://youtu.be/7mA4-MXxwgk">
@@ -36,11 +36,11 @@ Stubby DB is a npm module. In simple words you can stub the HTTP/HTTPS calls to 
 </a>
 </p>
 
-###Features and Basic terminology
+### Features and Basic terminology
 
 To start with stubby db, you need to create **a yaml file** which maps request with response. You may need **response files** as per your need and optional config.json file to ask Stubby DB to use default options defined by you.
 
-####Mappings
+#### Mappings
 yaml based mappings are required to map a request with relevant response file. You can have multiple files instead of maintaining a big fat file. You can also mark files which should be used to map the requests and skip which are under development.
 
 ```yaml
@@ -57,7 +57,7 @@ yaml based mappings are required to map a request with relevant response file. Y
 ```
 For maintainability purpose and to keep the size of mapping file short you can use **Short Notations** and **Default configuration**. Check [wiki](https://github.com/NaturalIntelligence/StubbyDB/wiki/03.0-Mappings) for more detail.
 
-####Strategy
+#### Strategy
 Many times, you don't have just one-to-one mapping between the request and response. You want to server different response every time, or you want to serve default response instead of saying 404 (stub data not found). There are many strategies, you can use suits to your requirement;
 
 ```yaml
@@ -76,7 +76,7 @@ Stubby DB is currently supporting following strategies;
 3. round-robin : In above example, serve the files in sequential order. So on second same request, it'll serve response from file2.xml
 
 
-####Dynamic Response
+#### Dynamic Response
 Instead of creating multiple mappings for same request where just few query parameters or headers are being changed. You can use Regular expression to write generic mappings.
 
 Capture some part from request and use it determine the file name, or use it in file contents, or in response headers.
@@ -93,7 +93,7 @@ Capture some part from request and use it determine the file name, or use it in 
       body: <% post.0 %>,<% post.1 %>,<% post.2 %>	
 ```
 
-####Data dumps
+#### Data dumps
 Stubby DB let you construct the response from multiple files. You can include contents of other file into your response files.
 
 This is the content from sample response file.
@@ -106,7 +106,7 @@ Now you need not maintain a big response file. Split them and reuse in different
 You can also decide at the run time which dumps have to be included.
 
 
-####DB sets
+#### DB sets
 If you still feel that you have so many response files in your project and it is being difficult to maintain them, use this **skeleton based approach**. 
 
 Use a response file as skeleton and fill the data from a dbset.
@@ -146,26 +146,26 @@ Description: This is project 2
 
 See sample [yaml](https://github.com/NaturalIntelligence/stubby-db-test/blob/master/mappings/dbset.yaml) for more detail. Check [DBset wiki](https://github.com/NaturalIntelligence/StubbyDB/wiki/08.0-DB-Sets#strategy) to know about strategies for DB sets.
 
-####Latency
+#### Latency
 When you want to serve the response with some delay. It may be useful to test negative scenarios or for performance test.
 
-####DEBUG & Logging
+#### DEBUG & Logging
 
 1. On screen loggin with '-v' or '--verbose' option
 2. File based logging with '-l' or '--logs' option
 3. On demand logging with query parameter 'debug=true' with request URL. It gives additional detail with the response: Original request, Matched mapping, Raw and fine response etc. Response status depends on how your requests gets resolved. If 'debug=true' is provided on root url, then it gives system level information, configuration etc.
 
-####Expressions
+#### Expressions
 Expressions are build by markers and functions. If you write a marker `{{TODAY+1y-2m+3d}}` in response body or file, It'll be converted into date. If you write `{{formatDate(TODAY,"dd D, MMM YYYY HH:mm:ss")}}` current date will be written in specified format. See complete list of markers & functions on [expressions](https://github.com/NaturalIntelligence/StubbyDB/wiki/06.0-Expressions) page.
 
-####Configuration
+#### Configuration
 StubbyDB provides you many way of configuring your project: commandline arguments, configuration file, directory structure.
 
-####SSL hanndshaking
+#### SSL hanndshaking
 Stubby DB supports HTTPS and 2 way SSL handshaking as well. Have a look on [wiki](https://github.com/NaturalIntelligence/StubbyDB/wiki/10.0-SSL-handshaking) and demo application for more detail.
 
-####Compression
+#### Compression
 If accept-encoding header is set to deflate or gzip then stubby-db serve compressed response.
 
-####Attachments
+#### Attachments
 If contentType property is set in your mappings, stubby db sends file otherwise it sends file response as response body after resolving all markers,expressions,dbsets etc.
